@@ -9,10 +9,12 @@ const Link = require('./resolvers/Link')
 const { PubSub } = require('apollo-server')
 
 const pubsub = new PubSub()
+const Subscription = require('./resolvers/Subscription')
 
 const resolvers = {
   Query,
   Mutation,
+  Subscription,
   User,
   Link
 }
