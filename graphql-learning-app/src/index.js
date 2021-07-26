@@ -6,7 +6,7 @@ const User = require('./resolvers/User')
 const Link = require('./resolvers/Link')
 
 // ... previous import statements
-const { PubSub } = require('apollo-server')
+const { PubSub } = require('graphql-subscriptions');
 
 const pubsub = new PubSub()
 const Subscription = require('./resolvers/Subscription')
