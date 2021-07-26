@@ -4,6 +4,7 @@ const Query = require('./resolvers/Query')
 const Mutation = require('./resolvers/Mutation')
 const User = require('./resolvers/User')
 const Link = require('./resolvers/Link')
+const Vote = require('./resolvers/Vote')
 
 // ... previous import statements
 const { PubSub } = require('graphql-subscriptions');
@@ -16,7 +17,8 @@ const resolvers = {
   Mutation,
   Subscription,
   User,
-  Link
+  Link,
+  Vote,
 }
 
 const fs = require('fs');
