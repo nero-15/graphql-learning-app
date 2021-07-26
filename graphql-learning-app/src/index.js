@@ -5,6 +5,11 @@ const Mutation = require('./resolvers/Mutation')
 const User = require('./resolvers/User')
 const Link = require('./resolvers/Link')
 
+// ... previous import statements
+const { PubSub } = require('apollo-server')
+
+const pubsub = new PubSub()
+
 const resolvers = {
   Query,
   Mutation,
@@ -27,6 +32,7 @@ const server = new ApolloServer({
     return {
       ...req,
       prisma,
+      pubsub,
       userId:
         req && req.headers.authorization
           ? getUserId(req)
